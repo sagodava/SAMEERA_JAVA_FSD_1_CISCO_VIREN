@@ -1,4 +1,4 @@
-package OOPS.java;
+package cisco.java.OOPS;
 
 class Vehicle
 {

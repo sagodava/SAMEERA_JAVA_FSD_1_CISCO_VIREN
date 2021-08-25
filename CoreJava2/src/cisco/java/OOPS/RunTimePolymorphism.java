@@ -1,4 +1,4 @@
-package OOPS.java;
+package cisco.java.OOPS;
 class Bank{
 	float getRateOfInterest() {
 		return 0;

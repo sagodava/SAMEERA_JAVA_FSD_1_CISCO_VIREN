@@ -1,4 +1,4 @@
-package OOPS.java;
+package cisco.java.OOPS;
 
 public class Encapculation {
 	private int age;
