@@ -29,7 +29,7 @@ class Customer
 	}
 }
 
-public class Simple_Wait_Notify {
+public class Simple_Wait_Notify_Assignment {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
