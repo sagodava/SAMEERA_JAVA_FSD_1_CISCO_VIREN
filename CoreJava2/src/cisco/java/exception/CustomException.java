@@ -2,7 +2,8 @@ package cisco.java.exception;
 
 public class CustomException{  
 	  
-	   static void validate(int age) throws InvalidAgeException{  
+	   static void validate(int age) throws InvalidAgeException
+	   {  
 	     if(age<18)  
 	      throw new InvalidAgeException("not valid");  
 	     else  

@@ -1,5 +1,6 @@
 package cisco.java.exception;
 import java.util.Scanner;
+
 public class ThrowClause {
 	static int add(int num1, int num2) {
 		if(num1>900)
@@ -7,7 +8,7 @@ public class ThrowClause {
 			throw new ArithmeticException("Num1 > 900 and exception is there");
 		}else
 		{
-			
+			System.out.println("Both parameters are correct");
 		}
 		return num1+num2;
 	}
