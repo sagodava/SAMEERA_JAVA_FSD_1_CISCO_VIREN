@@ -36,6 +36,11 @@ class Car
 				this.engineType="Bigger";
 			}
 		}
+		
+		String getEngineType()
+		{
+			return this.engineType;
+		}
 	}
 	
 }
@@ -43,7 +48,19 @@ public class Inner_Complex {
 
 	public static void main(String[] args)
 	{
-		// TODO Auto-generated method stub
+		
+		Car car1=new Car("Mazda","8WD");
+		Car.Engine engine=car1.new Engine();
+		engine.setEngine();
+		System.out.println("Engine type for 8WD="+ engine.getEngineType());
+		
+		
+		Car car2=new Car("Crysler","4WD");
+		Car.Engine c2Engine=car2.new Engine();
+		c2Engine.setEngine();
+		System.out.println("Engine type for 4WD="+ c2Engine.getEngineType());
+		
+		
 		
 
 	}
