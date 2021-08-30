@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MyCalculator 
 {
+	
 	public   long power(int n,int p) throws Exception
 	{
 		
@@ -15,33 +16,27 @@ public class MyCalculator
 			return(long)(Math.pow(n, p));
 	}	
 
-
-}
-public class Solution
+	public static void main(String[] args) 
 {
-
-	public static final MyCalculator my_calculator=new MyCalculator();
-	 public static final Scanner sc= new Scanner(System.in);
-
-
-	  public static void main(String[] args) 
-	  {
 	
-		  while(sc.hasNextInt())
-		  {
-			int n=sc.nextInt();
-			int p=sc.nextInt();
-		  }
+	 MyCalculator c1=new MyCalculator();
+	  Scanner sc= new Scanner(System.in);
+
+	  System.out.println( "Enter 1st Number");
+		int n = sc.nextInt();
+		System.out.println( "Enter 2nd Number");
+		int p = sc.nextInt();
+	  
 		  try
 		  {
-			  System.out.println(my_calculator.power(n,p));
+			  System.out.println(c1.power(n, p));
 		  }
 		  catch(Exception e)
 		  {
 			  System.out.println(e);
 		  }
 	
-	  }
-
+	  
 }
 
+}
