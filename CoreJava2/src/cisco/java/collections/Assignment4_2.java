@@ -3,7 +3,7 @@ import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-public class Assignment {
+public class Assignment4_2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

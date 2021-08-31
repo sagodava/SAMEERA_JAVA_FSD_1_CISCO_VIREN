@@ -1,4 +1,4 @@
-package cisco.java.assg22;
+package cisco.java.Assignment2_2;
 
 class AreaOfShapeCODemo
 {

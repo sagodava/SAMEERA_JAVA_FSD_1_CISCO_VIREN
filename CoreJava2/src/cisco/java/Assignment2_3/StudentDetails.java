@@ -1,4 +1,4 @@
-package cisco.java.assg23;
+package cisco.java.Assignment2_3;
 
 class StudentDetailsDemo
 {

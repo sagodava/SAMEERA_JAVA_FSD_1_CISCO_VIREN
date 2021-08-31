@@ -9,7 +9,7 @@ class CustomException1 extends Exception
 	
 }
 
-public class Assignment
+public class Assignment4_1
 {
 	
 	static void validate(int sal) throws CustomException1
