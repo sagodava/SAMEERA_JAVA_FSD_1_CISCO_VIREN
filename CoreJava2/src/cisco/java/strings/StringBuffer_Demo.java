@@ -1,10 +1,11 @@
 package cisco.java.strings;
 
-public class StringBuffer {
+public class StringBuffer_Demo {
 
 	public static void main(String args[]) {
 		// TODO Auto-generated method stub
-		StringBuffer sb=new StringBuffer("HELLO");
+		StringBuffer sb=new StringBuffer("HELLO ");
+		
 		sb.append("Java");
 		System.out.println(sb);
 		
@@ -21,10 +22,11 @@ public class StringBuffer {
 		System.out.println(sb);
 		
 		System.out.println(sb.charAt(3));
+		
 		StringBuilder ss=new StringBuilder("Core");
 		
 		System.out.println(">>>>>>"+ss);
-		System.append("java");
+		ss.append("java");
 		System.out.println(">>>>>>"+ss);
 		System.out.println(ss.length());
 		System.out.println(ss.charAt(6));
