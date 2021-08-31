@@ -1,23 +1,41 @@
 package cisco.java.FileHandling;
+import java.io.*; 
+//Java program demonstrating FileInputStream  
+public class FileInputStreamProgram 
+{ 
+  public static void main(String args[]) throws IOException 
+  { 
 
-import java.io.IOException;
-import java.io.File;
+      //attach the file to FileInputStream 
+      FileInputStream fin= new FileInputStream("/Users/sagodava/Desktop/Assignment"); 
 
-public class FileInputStream 
-{
+      //illustrating getChannel() method 
+      System.out.println(fin.getChannel()); 
+      
+ 
 
-	public static void main(String[] args) throws IOException
-	{
-		// TODO Auto-generated method stub
-		FileInputStream fin= new FileInputStream("/Users/sagodava/Desktop/Assignment");
-		System.out.println(fin.getChannel());
-		System.out.println("Number of byte read:"+fin.available());
-		fin.skip(7);
-		System.out.println("FileContents:");
-		int ch;
-		while(ch=fin.read()!=-1)
-			System.out.print((char)ch);
-		fin.close();
-	}
+      //illustrating getFD() method 
+      //Returns the FileDescriptor object that represents the connection to the actual file
+      //in the file system being used by this
+      //System.out.println(fin.getFD()); 
 
+      //illustrating available method 
+      //Returns an estimate of the number of remaining bytes that can be read (or skipped over)
+      //from this input stream
+      System.out.println("Number of bytes read:"+fin.available()); 
+
+      //illustrating skip method 
+      /*Original File content: 
+      * This is my first line 
+      * This is my second line*/
+      fin.skip(7); 
+      System.out.println("FileContents :"); 
+      //read characters from FileInputStream and write them 
+      int ch; 
+      while((ch=fin.read())!=-1) 
+          System.out.print((char)ch); 
+        
+      //close the file 
+      fin.close(); 
+  } 
 }
