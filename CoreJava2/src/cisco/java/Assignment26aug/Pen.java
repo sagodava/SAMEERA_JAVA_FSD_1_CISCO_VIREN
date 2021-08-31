@@ -1,12 +1,12 @@
 package cisco.java.Assignment26aug;
 
 
-abstract  class CelloPen 
+abstract  class Pen 
 {
 	abstract void write();
 	abstract void refill();
 }
-class FountainPen extends CelloPen
+class FountainPen extends Pen
 {
 	public void write()
 	{
@@ -33,10 +33,11 @@ class FountainPen extends CelloPen
 			System.out.println("biting");
 		}
 	}
-		interface BasicAnimal
+		
+	interface BasicAnimal
 		{
 			void eat();
-			void Sleep();
+			void sleep();
 		}
 	 class Human extends Monkey implements BasicAnimal
 		{
@@ -56,13 +57,14 @@ class FountainPen extends CelloPen
 			
 	}
 	
-public class Pen{
+public class Pen
+{
 	public  void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
 		FountainPen f=new FountainPen();
 		f.changenib();
-		
+	
 		
 		Human h=new Human();
 		h.sleep();
@@ -73,7 +75,7 @@ public class Pen{
 		
 		BasicAnimal a=new Human();
 		a.eat();
-		a.Sleep();
+		a.sleep();
 
 
 	}
