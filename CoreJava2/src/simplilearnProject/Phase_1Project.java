@@ -38,65 +38,76 @@ public class Phase_1Project {
 	
 	static void searchmethod(String s1) throws FileNotFoundException
 	{
-		File file = new File("/Users/sagodava/Desktop/Project Folder/Folder/Ravi");
+		File file = new File("/Users/sagodava/Desktop/Project Folder/Folder");
+		Scanner scan=new Scanner(System.in);
 		
-		String b[] = file.list();
-	   int b1=0;
+		String ss[] = file.list();
 		
-		for (int i = 0; i < b.length-1; i++) 
-		{
-			
-			if (s1.equals(b[i])) 
-			{
-				b1=i;
-				
-			}
+		String st = scan.next();
+
+		String c[] = file.list();
+		boolean flag = false;
+
+		for (int i = 0; i < c.length; i++) {
+
+		Object check1 = c[i];
+		if (st.equals(check1)) {
+		flag = true;
+		break;
+		}
 		}
 
-		if (b1!=0)
-			System.out.println("File Found"+b1);
+		if (flag == true)
+		System.out.println("File  found sucessfully");
 		else
-			throw new FileNotFoundException("File Not Found");
-		}
+		System.out.println("File doesnt exists");
+	}
+		
     
     
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Welcome to the Project");
+		System.out.println("Project Name:- Virtual Key for Your Repositories ");
+		System.out.println("Developer Name:- Sameera Godavari");
+		System.out.println("Designation:- SDE Trainee");
+		System.out.println(" ");
+		
 		char ch;
+		File file = new File("/Users/sagodava/Desktop/Project Folder/Folder");
+		if(file.isDirectory())
+		{
+			List <String>listFile = Arrays.asList(file.list());
+			
+			Collections.sort(listFile);
+			
+			System.out.println("Retrieving the file names in  ascending order");
+			for(String s:listFile)
+			{
+				System.out.println(s);
+			}
+			
+
+		}
+		else{
+			System.out.println(file.getAbsolutePath() + " is not a directory");
+		}
 		do{
+			
+			
             System.out.println("\nFile Operations :");
-            System.out.println("1. Display all files in ascending order");
-            System.out.println("2. Add a file");
-            System.out.println("3. Delete a file");
-            System.out.println("4. Search a file");
-            System.out.println("5. Close the application");
+            System.out.println("1. Add a file");
+            System.out.println("2. Delete a file");
+            System.out.println("3. Search a file");
+            System.out.println("4. Application close");
             System.out.println("Enter your choice: ");
             int ch1 = sc.nextInt();
             switch (ch1)
             {
-            case 1 :
-            	File file = new File("/Users/sagodava/Desktop/Project Folder/Folder");
-        		if(file.isDirectory())
-        		{
-        			List <String>listFile = Arrays.asList(file.list());
-        			
-        			Collections.sort(listFile);
-        			
-        			System.out.println("Retrieving the file names in an ascending order");
-        			for(String s:listFile)
-        			{
-        				System.out.println(s);
-        			}
-        			
-
-        		}
-        		else{
-        			System.out.println(file.getAbsolutePath() + " is not a directory");
-        		}
-        		break;
+            
             	
-            case 2 :
+            case 1 :
             	System.out.println("Enter the file name you want to create: ");
             	String n1 = sc.next();
             	try {
@@ -106,7 +117,7 @@ public class Phase_1Project {
         		}
             	break;
             	
-            case 3 :
+            case 2:
             	System.out.println("Enter the file name you want to delete: ");
             	String d1 = sc.next();
             	try {
@@ -117,7 +128,7 @@ public class Phase_1Project {
             	break;
             	
            
-            case 4 :
+            case 3 :
             	System.out.println("Enter the file to be searched.. ");
             	String s1 = sc.next();
             	try {
@@ -128,7 +139,7 @@ public class Phase_1Project {
             	}
             	break;
             	
-            case 5 :
+            case 4 :
             	sc.close();
             	
             	System.out.println("Closed the Application ");
